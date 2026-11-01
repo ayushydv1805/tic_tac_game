@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Tic Tac Toe — Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Tic Tac Toe home"><span class="brand-mark">✳</span><span>PLAY<span class="brand-muted">FIELD</span></span></a>
+      <div class="top-actions"><span class="live-dot"></span><span>ARCADE MODE</span></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">THE CLASSIC, REIMAGINED</p>
+      <h1>TIC <span>·</span> TAC <span>·</span> TOE</h1>
+      <p class="subtitle">Three in a row. One legendary win.</p>
+    </section>
+
+    <section class="game-layout" aria-label="Tic tac toe game">
+      <aside class="side-panel">
+        <p class="panel-label">GAME MODE</p>
+        <div class="mode-switch" role="group" aria-label="Choose game mode">
+          <button class="mode-btn active" data-mode="friend" type="button">2 PLAYERS</button>
+          <button class="mode-btn" data-mode="computer" type="button">VS CPU</button>
+        </div>
+        <div class="turn-card">
+          <p class="panel-label">CURRENT TURN</p>
+          <div class="turn-display"><span id="turn-symbol" class="turn-symbol x-color">X</span><div><strong id="turn-name">PLAYER X</strong><small id="turn-hint">MAKE YOUR MOVE</small></div></div>
+        </div>
+        <div class="score-card">
+          <p class="panel-label">SCOREBOARD</p>
+          <div class="score-row"><div class="score-player"><span class="score-symbol x-color">X</span><span>PLAYER X</span></div><strong id="score-x">0</strong></div>
+          <div class="score-row"><div class="score-player"><span class="score-symbol o-color">O</span><span id="player-o-label">PLAYER O</span></div><strong id="score-o">0</strong></div>
+          <div class="score-row draws-row"><div class="score-player"><span class="score-symbol draw-color">＝</span><span>DRAWS</span></div><strong id="score-draw">0</strong></div>
+        </div>
+        <button id="reset-score" class="text-button" type="button">↻ RESET SCOREBOARD</button>
+      </aside>
+
+      <section class="board-panel">
+        <div class="board-heading"><div><p class="panel-label">THE BATTLEFIELD</p><h2 id="round-title">ROUND 01</h2></div><span class="status-pill" id="status-pill">IN PROGRESS</span></div>
+        <div class="board" id="board" role="grid" aria-label="Tic tac toe board">
+          <button class="cell" data-index="0" role="gridcell" aria-label="Row 1, column 1"></button>
+          <button class="cell" data-index="1" role="gridcell" aria-label="Row 1, column 2"></button>
+          <button class="cell" data-index="2" role="gridcell" aria-label="Row 1, column 3"></button>
+          <button class="cell" data-index="3" role="gridcell" aria-label="Row 2, column 1"></button>
+          <button class="cell" data-index="4" role="gridcell" aria-label="Row 2, column 2"></button>
+          <button class="cell" data-index="5" role="gridcell" aria-label="Row 2, column 3"></button>
+          <button class="cell" data-index="6" role="gridcell" aria-label="Row 3, column 1"></button>
+          <button class="cell" data-index="7" role="gridcell" aria-label="Row 3, column 2"></button>
+          <button class="cell" data-index="8" role="gridcell" aria-label="Row 3, column 3"></button>
+          <div class="win-line" id="win-line"></div>
+        </div>
+        <div class="result-message" id="result-message" aria-live="polite"><span class="result-icon">✦</span><span id="result-text">Your move, Player X</span></div>
+        <div class="board-actions"><button class="primary-btn" id="new-round" type="button"><span>↻</span> NEW ROUND</button><button class="secondary-btn" id="undo" type="button">UNDO MOVE</button></div>
+      </section>
+    </section>
+    <footer><span>BUILT FOR FRIENDLY RIVALRIES</span><span>✳ &nbsp; TAKE YOUR SHOT</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
