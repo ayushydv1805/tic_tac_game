@@ -3,7 +3,9 @@
 A responsive, browser-playable 2D Tic Tac Toe game based on the original C console game in this repository.
 
 ## Play it
-Open **[the live game](https://ayushydv1805.github.io/tic_tac_game/)** after enabling GitHub Pages (Settings → Pages → Deploy from a branch → `main` / `/(root)`). You can also download this repository and open `index.html` in any modern browser.
+**[Open the live game](https://tic-tac-game-ayush0018.vercel.app/)**
+
+You can also download this repository and open `index.html` in any modern browser.
 
 ## Features
 - Two-player local mode
